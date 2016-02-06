@@ -3,6 +3,7 @@ var inert = require('inert');
 var mongoose = require('mongoose');
 var routes = require('./routes');
 var auth = require('hapi-auth-cookie');
+var dbConnection = require('./dbConnection');
 
 var server = new hapi.Server();
 server.connection({
@@ -14,7 +15,7 @@ server.connection({
               }
 });
 
-mongoose.connect('mongodb://zsnake:password@ds049104.mongolab.com:49104/angular-scaffold');
+mongoose.connect(dbConnection());
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
