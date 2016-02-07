@@ -1,7 +1,7 @@
 module.exports = function(){
 	var databaseConfiguration = null;
 	if (~~process.env.enviroment==='dev'){
-		databaseConfiguration = 'mongodb://zsnake:password@ds049104.mongolab.com:49104/angular-scaffold';
+		databaseConfiguration = 'mongodb://admin:admin@ds059145.mongolab.com:59145/grader';
 	}
 	else{
 		databaseConfiguration = 'localhost:27017/grader';
