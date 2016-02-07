@@ -16,6 +16,7 @@ server.connection({
 });
 
 console.log(dbConnection());
+console.log(~~process.env.enviroment);
 mongoose.connect(dbConnection());
 
 var db = mongoose.connection;
