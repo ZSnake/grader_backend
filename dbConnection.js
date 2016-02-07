@@ -1,6 +1,6 @@
 module.exports = function(){
 	var databaseConfiguration = null;
-	if (~~process.env.enviroment==='dev'){
+	if (process.env.enviroment==='dev'){
 		databaseConfiguration = 'mongodb://admin:admin@ds059145.mongolab.com:59145/grader';
 	}
 	else{
